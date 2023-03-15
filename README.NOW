@@ -1,2 +1,3 @@
-readme
-======
+This is a minimal example of extracting flags and values from command line arguments without using the standard ``flag`` package. The ``main()`` function just calls ``parseFlags()`` using ``os.Args[1:]``. In most cases this should be the way it's used, but for the sake of modularity it will accept any ``[]string`` type argument (useful for only parsing a slice of the arguments, or for implementing subcommands). The flags and values are stored in two string arrays, in the order in which they respectively appear. Grouped short flags (single ``-`` character prefix) are split.
+
+While this example should be portable, implementing a list of accepted arguments per-program and matching input is left up to the user to handle. Good luck!
